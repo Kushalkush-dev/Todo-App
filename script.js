@@ -3,9 +3,11 @@ const addbtn=document.querySelector(".add-btn");
 const todolistul=document.querySelector(".todolist");
 const todoform=document.querySelector(".todo-form");
 
-const todolists=[];
+let todolists=[];
 
 
+gettodos();
+generatetodoinfo()
 
 
 todoform.addEventListener("submit", event=>{
@@ -18,6 +20,8 @@ todoform.addEventListener("submit", event=>{
   todolists.push(inputvalue);
   todoinput.value="";
   generatetodoinfo();
+
+  savetodo();
   }
 
   
@@ -46,6 +50,17 @@ function deletetodo(index){
 
   todolists.splice(index,1);
   generatetodoinfo();
+  savetodo();
 
 }
 
+
+function savetodo(){
+  const todosjson=JSON.stringify(todolists)
+  localStorage.setItem("todos", todosjson)
+}
+
+function gettodos(){
+  const todojsonobj=localStorage.getItem("todos") || "[]"
+  todolists=JSON.parse(todojsonobj);
+}
