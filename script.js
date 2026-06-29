@@ -45,6 +45,8 @@ todolists.forEach((element,index) => {
  
         const checkbox=todoli.querySelector("input");
         checkbox.checked=element.completed;
+
+  console.log("Checkbox updated")
         
         checkbox.addEventListener("change",()=>{
           todolists[index].completed=checkbox.checked;
