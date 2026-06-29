@@ -65,7 +65,7 @@ function deletetodo(index){
   todolists.splice(index,1);
   generatetodoinfo();
   savetodo();
-  console.log("Todo Deleted Successfully")
+  console.log("Todo Deleted Successfully ")
 
 }
 
@@ -79,4 +79,5 @@ function savetodo(){
 function gettodos(){
   const todojsonobj=localStorage.getItem("todos") || "[]"
   todolists=JSON.parse(todojsonobj);
+  console.log("Todo fetched Successfully")
 }
