@@ -22,7 +22,7 @@ todoform.addEventListener("submit", event=>{
   todolists.push(todoobject);
   todoinput.value="";
   generatetodoinfo();
-
+  console.log("todo generated Successfully")
   savetodo();
   }
 
