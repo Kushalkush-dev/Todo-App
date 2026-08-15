@@ -1,3 +1,3 @@
 A Simple Todo App with local storage which saves the added todos even when the site is refreshed or closed.
 
-Quick Fast and Easy to use
+Simple interface , Quick Access and Snappy UI
